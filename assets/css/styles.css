@@ -1,0 +1,122 @@
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.ramo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cambia el número para ajustar la cantidad de flores */
+    gap: 40px; /* Aumentamos el espacio entre las flores */
+    transform: translateY(-50px); /* Ajusta la posición vertical del ramo */
+}
+
+.flor {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    position: relative;
+    border-radius: 50%;
+}
+
+/* Añade más estilos a las flores si lo deseas */
+/*
+.flor:nth-child(2) {
+    transform: rotate(0deg);
+}
+
+.flor:nth-child(3) {
+    transform: rotate(20deg);
+}
+*/
+
+.girasol {
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    position: relative;
+}
+
+.centro {
+    width: 50px;
+    height: 50px;
+    background-color: #d2691e; /* Café */
+    border-radius: 50%;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+    z-index: 2; /* Asegura que el centro esté por encima de los pétalos */
+}
+
+.petalos {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1; /* Los pétalos tienen un z-index menor que el centro */
+}
+
+.petalo {
+    width: 100%;
+    height: 100%;
+    background-color: #ffd700; /* Amarillo */
+    position: absolute;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.p1 {
+    transform: rotate(0deg);
+}
+
+.p2 {
+    transform: rotate(45deg);
+}
+
+.p3 {
+    transform: rotate(90deg);
+}
+
+.p4 {
+    transform: rotate(135deg);
+}
+
+.p5 {
+    transform: rotate(180deg);
+}
+
+.p6 {
+    transform: rotate(225deg);
+}
+
+.p7 {
+    transform: rotate(270deg);
+}
+
+.p8 {
+    transform: rotate(315deg);
+}
+
+.tallo {
+    width: 20px; /* Hacemos el tallo más delgado */
+    height: 120px;
+    background-color: #228b22; /* Verde */
+    position: absolute;
+    top: 200px; /* Ajustamos la posición del tallo */
+    left: 90px; /* Ajustamos la posición del tallo */
+    z-index: 2; /* Establecemos un z-index mayor que los pétalos */
+}
+
+.collage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.collage img {
+    max-width: 100%;
+    height: auto;
+}
